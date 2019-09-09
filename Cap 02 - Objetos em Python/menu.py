@@ -56,9 +56,9 @@ class Menu:
         memo = input("Entre com a anotação: ")
         tags = input("Entre com as tags: ")
         if memo:
-            self.notebook.modify_memo(id, memo)
+            self.notebook.modify_memo(int(id), memo)
         if tags:
-            self.notebook.modify_tags(id, tags)
+            self.notebook.modify_tags(int(id), tags)
             
     def quit(self):
         print("Obrigado por usar nosso sitema!")

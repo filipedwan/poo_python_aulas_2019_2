@@ -82,21 +82,21 @@ class Authorizor:
         self.permissions = {}
     
     def add_permission(self, perm_name):
-        '''Create a new permission that users
-        can be added to'''
+        '''Criar uma nova permissao à qual
+        usuários podem estar vinculados'''
         try:
             perm_set = self.permissions[perm_name]
         except KeyError:
             self.permissions[perm_name] = set()
         else:
-            raise PermissionError("Permission Exists")
+            raise PermissionError("Permissão já existe")
     
     def permit_user(self, perm_name, username):
-        '''Grant the given permission to the user'''
+        '''Conceder permissão a um usuário'''
         try:
             perm_set = self.permissions[perm_name]
         except KeyError:
-            raise PermissionError("Permission does not exist")
+            raise PermissionError("Permissão não existe")
         else:
             if username not in self.authenticator.users:
                 raise InvalidUsername(username)
@@ -108,7 +108,7 @@ class Authorizor:
         try:
             perm_set = self.permissions[perm_name]
         except KeyError:
-            raise PermissionError("Permission does not exist")
+            raise PermissionError("Permissão não existe")
         else:
             if username not in perm_set:
                 raise NotPermittedError(username)

@@ -1,0 +1,2 @@
+A presente aula é uma mera adapação do projeto disposto em:
+https://github.com/brenordv/python-tutorial-tkinter-sqlite-01

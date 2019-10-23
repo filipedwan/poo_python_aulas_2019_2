@@ -41,13 +41,12 @@ class Gui():
         self.lblsobrenome.grid(row=1,column=0)
         self.lblemail.grid(row=2,column=0)
         self.lblcpf.grid(row=3, column=0)
-        #self.entNome.grid(row=0, column=1, padx=50, pady=50)
         self.entNome.grid(row=0, column=1)
         self.entSobrenome.grid(row=1, column=1)
         self.entEmail.grid(row=2, column=1)
         self.entCPF.grid(row=3, column=1)
         self.listClientes.grid(row=0, column=2, rowspan=10)#rowspan para fazer com que o objeto ocupe mais de uma linha.
-        self.scrollClientes.grid(row=0, column=6, rowspan=10)
+        self.scrollClientes.grid(row=0, column=3, rowspan=10)
         self.btnViewAll.grid(row=4, column=0, columnspan=2)#columnspan para fazer com que o objeto ocupe mais de uma linha.
         self.btnBuscar.grid(row=5, column=0, columnspan=2)
         self.btnInserir.grid(row=6, column=0, columnspan=2)
@@ -63,7 +62,6 @@ class Gui():
         "definindo o tamanho dos elementos"
         x_pad = 5
         y_pad = 3
-        width_entry = 30
 
         '''
         * Precisamos aplicar o padding para quase todos os 
@@ -103,3 +101,5 @@ class Gui():
         self.configure_layout()
         self.configure_sizes()
         self.window.mainloop()
+
+#Gui().run()
